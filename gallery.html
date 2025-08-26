@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Soltech Solution | Gallery</title>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* --- Gallery Specific Styles --- */
+    .gallery-section {
+      padding: 3rem 0;
+    }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+    .gallery-item {
+      position: relative;
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 6px 25px rgba(0, 0, 0, 0.08);
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+    .gallery-item:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 16px 35px rgba(0, 0, 0, 0.15);
+    }
+    .gallery-item:hover img {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav id="navbar">
+    <div class="logo">
+      <span class="logo-icon"><i class="fas fa-solar-panel"></i></span>
+      <span class="logo-text">Soltech Solution</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="gallery.html" style="color: var(--sun);">Gallery</a></li>
+      <li><a href="vlogs.html">Vlogs</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="about_us.html">About Us</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="contact.html" class="cta-button">Free Consultation</a>
+    </div>
+  </nav>
+
+  <!-- Gallery -->
+  <section class="gallery-section container">
+    <h2>Our Solar Installations</h2>
+    <div class="gallery-grid">
+      <div class="gallery-item"><img src="images/img2.jpg" alt="Solar panel installation - project 1" /></div>
+      <div class="gallery-item"><img src="images/img3.jpg" alt="Solar panel installation - project 2" /></div>
+      <div class="gallery-item"><img src="images/img4.jpg" alt="Solar panel installation - project 3" /></div>
+      <div class="gallery-item"><img src="images/img5.jpg" alt="Solar panel installation - project 4" /></div>
+      <div class="gallery-item"><img src="images/img6.jpg" alt="Solar panel installation - project 5" /></div>
+      <div class="gallery-item"><img src="images/img7.jpg" alt="Solar panel installation - project 6" /></div>
+      <div class="gallery-item"><img src="images/img8.jpg" alt="Solar panel installation - project 7" /></div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-section">
+        <div class="logo">
+          <span class="logo-icon"><i class="fas fa-solar-panel"></i></span>
+          <span class="logo-text">Soltech Solution</span>
+        </div>
+        <p>Professional solar installation services across Ujjain, India</p>
+      </div>
+      <div class="footer-section">
+        <h4>Contact Info</h4>
+        <p><i class="fas fa-phone"></i> +91-9754985336, +91-9131881916</p>
+        <p><i class="fas fa-envelope"></i> soltechsolution91@gmail.com</p>
+        <p><i class="fas fa-map-marker-alt"></i> Ujjain, Madhya Pradesh, India</p>
+      </div>
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="about_us.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Soltech Solution. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Scroll-compact Navbar
+    const nav = document.getElementById('navbar');
+    const onScroll = () => nav.classList.toggle('compact', window.scrollY > 10);
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+  </script>
+</body>
+</html>

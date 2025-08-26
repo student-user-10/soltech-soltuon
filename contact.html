@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact Us - Soltech Solution</title>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Page-specific overrides */
+    body {
+      background: url('assets/background.jpg') no-repeat center center fixed;
+      background-size: cover;
+    }
+    .contact-wrapper {
+      padding: 3rem 0;
+    }
+    .contact-info {
+      text-align: center;
+      margin-bottom: 2rem;
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: var(--brand, #0a3d62);
+    }
+    .contact-card {
+      max-width: 600px;
+      margin: auto;
+      background: rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(8px);
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: 0 6px 25px rgba(0, 0, 0, 0.08);
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+    label {
+      font-weight: 600;
+      margin-bottom: 6px;
+      color: var(--brand);
+    }
+    input, textarea {
+      padding: 12px;
+      font-size: 1rem;
+      border: 2px solid #ddd;
+      border-radius: 8px;
+      margin-bottom: 1.2rem;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+    input:focus, textarea:focus {
+      border-color: var(--sun);
+      outline: none;
+      box-shadow: 0 0 8px rgba(249, 168, 37, 0.4);
+    }
+    button {
+      background: linear-gradient(135deg, var(--sun), var(--sun-2));
+      color: #fff;
+      font-weight: 700;
+      padding: 14px;
+      font-size: 1.1rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(249,168,37,0.5);
+    }
+    .social-media {
+      text-align: center;
+      margin-top: 2rem;
+    }
+    .social-media a {
+      display: inline-block;
+      margin: 0 10px;
+      padding: 10px 16px;
+      border: 2px solid var(--sun);
+      border-radius: 8px;
+      color: var(--sun);
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+    .social-media a:hover {
+      background: var(--sun);
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav id="navbar">
+    <div class="logo">
+      <span class="logo-icon"><i class="fas fa-solar-panel"></i></span>
+      <span class="logo-text">Soltech Solution</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="vlogs.html">Vlogs</a></li>
+      <li><a href="contact.html" style="color: var(--sun);">Contact</a></li>
+      <li><a href="about_us.html">About Us</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="contact.html" class="cta-button">Free Consultation</a>
+    </div>
+  </nav>
+
+  <!-- Contact Content -->
+  <section class="contact-wrapper container">
+    <div class="contact-info">
+      <p><strong>Phone:</strong> +91 9754985336, +91 9131881916</p>
+      <p><strong>Email:</strong> soltechsolution91@gmail.com</p>
+    </div>
+
+    <div class="contact-card">
+      <h2 style="text-align:center; margin-bottom:1.5rem;">Get in Touch</h2>
+      <form id="contactForm" onsubmit="sendWhatsappMessage(event)">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Your Name" required />
+
+        <label for="number">Contact No.:</label>
+        <input type="tel" id="number" name="number" placeholder="Your Contact No." required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Your Email" required />
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+
+        <button type="submit">Send via WhatsApp</button>
+      </form>
+
+      <div class="social-media">
+        <h3>Connect with Us</h3>
+        <a href="https://www.facebook.com" target="_blank">Facebook</a>
+        <a href="https://www.instagram.com" target="_blank">Instagram</a>
+        <a href="https://wa.me/919754985336" target="_blank">WhatsApp</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-section">
+        <div class="logo">
+          <span class="logo-icon"><i class="fas fa-solar-panel"></i></span>
+          <span class="logo-text">Soltech Solution</span>
+        </div>
+        <p>Professional solar installation services across Ujjain, India</p>
+      </div>
+      <div class="footer-section">
+        <h4>Contact Info</h4>
+        <p><i class="fas fa-phone"></i> +91-9754985336, +91-9131881916</p>
+        <p><i class="fas fa-envelope"></i> soltechsolution91@gmail.com</p>
+        <p><i class="fas fa-map-marker-alt"></i> Ujjain, Madhya Pradesh, India</p>
+      </div>
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="about_us.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Soltech Solution. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    function sendWhatsappMessage(event) {
+      event.preventDefault();
+      const name = encodeURIComponent(document.getElementById('name').value.trim());
+      const number = encodeURIComponent(document.getElementById('number').value.trim());
+      const email = encodeURIComponent(document.getElementById('email').value.trim());
+      const message = encodeURIComponent(document.getElementById('message').value.trim());
+
+      const phoneNumber = '919754985336';
+      const text = `New contact form submission:%0AName: ${name}%0AContact: ${number}%0AEmail: ${email}%0AMessage:%0A${message}`;
+      const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+      const url = isMobile
+        ? `whatsapp://send?phone=${phoneNumber}&text=${text}`
+        : `https://web.whatsapp.com/send?phone=${phoneNumber}&text=${text}`;
+      window.open(url, '_blank');
+    }
+  </script>
+</body>
+</html>

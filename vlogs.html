@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Soltech Solution | Vlogs</title>
+  <!-- Brand Styles -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* --- Vlogs Page Specific Styles --- */
+    .vlogs-section {
+      padding: 3rem 0;
+    }
+
+    .vlogs-grid {
+      display: grid;
+      gap: 2rem;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    }
+
+    .vlog-card {
+      background: var(--glass, rgba(255,255,255,0.9));
+      backdrop-filter: blur(10px);
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 6px 25px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .vlog-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 16px 35px rgba(0,0,0,0.12);
+    }
+
+    /* All videos same aspect ratio */
+    .vlog-card video {
+      width: 100%;
+      aspect-ratio: 16 / 9; /* Keeps shape consistent */
+      object-fit: cover;    /* Crops edges without distortion */
+      display: block;
+      border-bottom: 4px solid var(--sun, #f9a825);
+      background: #000;     /* fallback for loading */
+      border-top-left-radius: 18px;
+      border-top-right-radius: 18px;
+    }
+
+    .vlog-info {
+      padding: 1rem;
+    }
+
+    .vlog-info h3 {
+      font-size: 1.2rem;
+      color: var(--brand, #0a3d62);
+      margin-bottom: 0.5rem;
+    }
+
+    .vlog-info p {
+      color: var(--muted, #555);
+      font-size: 0.95rem;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav id="navbar">
+    <div class="logo">
+      <span class="logo-icon"><i class="fas fa-solar-panel"></i></span>
+      <span class="logo-text">Soltech Solution</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="vlogs.html" style="color: var(--sun);">Vlogs</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="about_us.html">About Us</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="contact.html" class="cta-button">Free Consultation</a>
+    </div>
+  </nav>
+
+  <!-- Vlogs Section -->
+  <section class="vlogs-section container">
+    <h2>Our Solar Vlogs</h2>
+    <div class="vlogs-grid">
+
+      <div class="vlog-card">
+        <video src="./vlogs/blog1.mp4" controls></video>
+        <div class="vlog-info">
+          <h3>Residential Solar Installation</h3>
+          <p>Walkthrough of a 5kW rooftop installation process.</p>
+        </div>
+      </div>
+
+      <div class="vlog-card">
+        <video src="./vlogs/blog2.mp4" controls></video>
+        <div class="vlog-info">
+          <h3>Commercial Project Tour</h3>
+          <p>Inside a 25kW system for a thriving business.</p>
+        </div>
+      </div>
+
+      <div class="vlog-card">
+        <video src="./vlogs/blog3.mp4" controls></video>
+        <div class="vlog-info">
+          <h3>Energy Storage Setup</h3>
+          <p>How we integrate battery systems for 24/7 power.</p>
+        </div>
+      </div>
+
+      <div class="vlog-card">
+        <video src="./vlogs/blog4.mp4" controls></video>
+        <div class="vlog-info">
+          <h3>Off-Grid Innovation</h3>
+          <p>100kW industrial plant powered entirely by solar.</p>
+        </div>
+      </div>
+
+      <div class="vlog-card">
+        <video src="./vlogs/blog5.mp4" controls></video>
+        <div class="vlog-info">
+          <h3>Maintenance & Care</h3>
+          <p>Tips for keeping your solar systems at peak performance.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-section">
+        <div class="logo">
+          <span class="logo-icon"><i class="fas fa-solar-panel"></i></span>
+          <span class="logo-text">Soltech Solution</span>
+        </div>
+        <p>Professional solar installation services across Ujjain, India</p>
+      </div>
+      <div class="footer-section">
+        <h4>Contact Info</h4>
+        <p><i class="fas fa-phone"></i> +91-9754985336, +91-9131881916</p>
+        <p><i class="fas fa-envelope"></i> soltechsolution91@gmail.com</p>
+        <p><i class="fas fa-map-marker-alt"></i> Ujjain, Madhya Pradesh, India</p>
+      </div>
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="about_us.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Soltech Solution. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Scroll-compact Navbar
+    const nav = document.getElementById('navbar');
+    const onScroll = () => {
+      nav.classList.toggle('compact', window.scrollY > 10);
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+  </script>
+</body>
+</html>

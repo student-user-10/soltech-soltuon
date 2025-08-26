@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About Us - Soltech Solution</title>
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Page-specific overrides */
+    .about-header {
+      background: linear-gradient(135deg, var(--brand, #0a3d62), #062b45);
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
+    .about-header h1 {
+      margin: 0;
+      font-size: 3rem;
+      font-weight: 800;
+    }
+    .about-header p {
+      font-size: 1.2rem;
+      margin-top: 10px;
+      opacity: 0.9;
+    }
+    .about-container {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+    .about-card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 1.5rem;
+      box-shadow: 0 6px 25px rgba(0, 0, 0, 0.06);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .about-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+    }
+    .about-card h2 {
+      color: var(--sun, #f9a825);
+      font-size: 1.6rem;
+      margin-bottom: 0.8rem;
+    }
+    .about-card p {
+      color: var(--muted, #555);
+    }
+    .team-image {
+      width: 100%;
+      border-radius: 10px;
+      margin-top: 1rem;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+    }
+    blockquote {
+      font-style: italic;
+      border-left: 4px solid var(--sun, #f9a825);
+      margin: 1rem 0;
+      padding-left: 1rem;
+      color: #444;
+      background: #fafafa;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav id="navbar">
+    <div class="logo">
+      <span class="logo-icon"><i class="fas fa-solar-panel"></i></span>
+      <span class="logo-text">Soltech Solution</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="vlogs.html">Vlogs</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="about_us.html" style="color: var(--sun);">About Us</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="contact.html" class="cta-button">Free Consultation</a>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header class="about-header">
+    <h1>About Soltech Solution</h1>
+    <p>Your trusted partner in solar energy solutions</p>
+  </header>
+
+  <!-- Content -->
+  <section class="about-container">
+    <div class="about-card">
+      <h2>Our Mission</h2>
+      <p>To provide sustainable energy solutions that empower communities and protect the environment.</p>
+    </div>
+
+    <div class="about-card">
+      <h2>Our Vision</h2>
+      <p>To be a leader in the solar energy industry, making renewable energy accessible to everyone.</p>
+    </div>
+
+    <div class="about-card">
+      <h2>Meet Our Team</h2>
+      <p>Our team consists of experienced professionals dedicated to delivering high-quality solar solutions.</p>
+      <img src="assets/team.jpg" alt="Our team at Soltech Solution" class="team-image" />
+    </div>
+
+    <div class="about-card">
+      <h2>What Our Clients Say</h2>
+      <blockquote>
+        "Soltech Solution transformed our energy consumption. Highly recommend!" – Happy Customer
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-section">
+        <div class="logo">
+          <span class="logo-icon"><i class="fas fa-solar-panel"></i></span>
+          <span class="logo-text">Soltech Solution</span>
+        </div>
+        <p>Professional solar installation services across Ujjain, India</p>
+      </div>
+      <div class="footer-section">
+        <h4>Contact Info</h4>
+        <p><i class="fas fa-phone"></i> +91-9754985336 ,+91-9131881916</p>
+        <p><i class="fas fa-envelope"></i> soltechsolution91@gmail.com</p>
+        <p><i class="fas fa-map-marker-alt"></i> Ujjain, Madhya Pradesh, India</p>
+      </div>
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="about_us.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Soltech Solution. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Navbar shrink on scroll
+    const nav = document.getElementById('navbar');
+    const onScroll = () => nav.classList.toggle('compact', window.scrollY > 10);
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+  </script>
+</body>
+</html>
